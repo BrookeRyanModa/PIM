@@ -1,3 +1,21 @@
+//vars
+
+$card-width: 23%;
+$card-width-mobile: 23%;
+$card-height: 33vw;
+$card-height-mobile: 33vw;
+
+//colors
+$white: #FCFCFD;
+$light-grey: #EEE;
+$light-blue: #F1F5F9;
+$dark-green: #0B502D;
+$darkest-green: #054927; //only pkt title
+$navy: #000033;
+$darkest-navy: #00001E;
+$shadow: 1px 1px 14px 2px #C0C0C0;
+$shadow-hover: 1px 1px 10px 2px $darkest-navy;
+$border: solid $light-grey;
 
 ::ng-deep * {
   box-sizing: border-box;
@@ -7,10 +25,10 @@
 
 .card-container {
   padding: 3vw 1vw;
-  border-top: 1px solid lightgrey;
-  box-shadow: inset 1px 1px 14px 2px #c0c0c0;
+  border-top: 1px $border;
+  box-shadow: inset $shadow;
   overflow: auto;
-  background-color: #FCFCFD;
+  background-color: $white;
 }
 .card-container::after {
   content: "";
@@ -19,22 +37,23 @@
 }
 
 .item-card {
-  background-color: #F1F5F9;
+  background-color: $light-blue;
+  border-radius: .25vw;
   overflow: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 23%;
-  min-height: 33vw;
+  width: $card-width;
+  min-height: $card-height;
   height: auto;
   margin: 1%;
   padding: 0px;
   display: inline-block;
   float: left;
-  box-shadow: 1px 1px 14px 2px #c0c0c0;
+  box-shadow: $shadow;
   &:hover {
-    box-shadow: 1px 1px 5px 2px grey;
+    box-shadow: $shadow-hover;
   }
 
   .item-card::after {
@@ -44,18 +63,12 @@
   }
 
   span.fa.fa-plus {
-    color: lightgray;
+    color: $dark-green;
     line-height: 33vw;
     padding-left: 44%;
     font-size: 2vw;
   }
-  //font-family: 'Rubik', sans-serif;
-  //font-family: 'Source Sans Pro', sans-serif;//body
-  //font-family: 'Sunflower', sans-serif;
-  //font-family: 'Quattrocento Sans', sans-serif;//meh
-  //font-family: 'Oswald', sans-serif;
-  //font-family: 'Signika', sans-serif;
-  //font-family: 'Signika Negative', sans-serif;//body
+
   .mat-card-title {
     font-family: 'Baloo Paaji', cursive;//packet title
     text-transform: uppercase;
@@ -63,7 +76,7 @@
     font-size: 1.25vw;
     text-align: center;
     padding: 5% 5% 0 5%;
-    color: #0B502D;
+    color: $dark-green;
     margin: 0;
   }
   .mat-card-subtitle {
@@ -71,7 +84,7 @@
     font-size: .85vw;
     padding: 0 7.5%;
     margin: 0;
-    border-bottom: .5px solid lightgrey;
+    border-bottom: .5px $border;
     font-family: 'Lato', sans-serif;//card name
 
   }
@@ -85,19 +98,18 @@
 .packet-detail-header {
   font-size: 1.5vw;
   padding: 1vw 2vw 2vw 2vw;
-  color: #054927;
 
   .packet-title {
+    color: $darkest-green;
     font-weight: 100;
     font-family: 'Baloo Paaji', cursive;
     text-transform: uppercase;
-
   }
 
   .packet-desc {
     font-size: 2vw;
     font-family: 'Lato', sans-serif;//card name
     letter-spacing: .1vw;
-    color: #0B502D;
+    color: $navy;
   }
 }
