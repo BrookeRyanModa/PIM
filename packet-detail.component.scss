@@ -43,7 +43,7 @@
   }
 
   .mat-card-title {
-    text-transform: uppercase;
+    font-family: 'Baloo Bhaijaan', cursive;
     font-size: 1.25vw;
     text-align: center;
     padding: 12% 7.5% 0 7.5%;
@@ -64,6 +64,10 @@
 }
 
 .packet-detail-header {
+  // font-family: 'Baloo', cursive;
+  // font-family: 'Baloo Tamma', cursive;
+  font-family: 'Baloo Bhaijaan', cursive;
+  text-transform: uppercase;
   font-size: 1.5vw;
   padding: 1vw 2vw 2vw 2vw;
   color: #054927;
@@ -76,6 +80,5 @@
 .packet-desc {
   font-size: 2vw;
   font-family: serif;
-  padding: .5vw;
   font-family: 'Signika Negative', sans-serif;
 }

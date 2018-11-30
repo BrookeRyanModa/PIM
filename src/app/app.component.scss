@@ -1,0 +1,29 @@
+
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #EEE;
+}
+
+mat-sidenav {
+  background-color: #F8F9FA;
+  padding: 0;
+  margin: 0;
+  width: 18%;
+  box-shadow: 0 0 10px 0 #c0c0c0;
+  .logo {
+    margin-top: 2vw;
+    font-size: 3.75vw;
+    text-shadow: .75px .75px white;
+    text-align: center;
+    font-family: 'Titan One', cursive;
+  }
+}
+
+mat-sidenav-content {
+  padding: 3%;
+
+}

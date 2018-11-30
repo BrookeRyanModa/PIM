@@ -1,8 +1,12 @@
-<div>
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-
-</div>
-
-<router-outlet></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <h1 class="logo">
+      {{ title }}
+    </h1>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <span *ngIf="!opened"(click)="sidenav.toggle()" class="fas fa-angle-right"></span>
+    <span *ngIf="opened"(click)="sidenav.toggle()" class="fas fa-angle-left"></span>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
