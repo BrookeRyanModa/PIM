@@ -1,0 +1,84 @@
+
+::ng-deep * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.card-container {
+  padding: 3vw 1vw;
+  border-top: 1px solid lightgrey;
+  box-shadow: inset 1px 1px 14px 2px #c0c0c0;
+  overflow: auto;
+  background-color: #FCFCFD;
+}
+.card-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.item-card {
+  background-color: #F8F9FA;
+  font-family: 'Signika Negative', sans-serif;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 23%;
+  height: 25vw;
+  margin: 1%;
+  padding: 0px;
+  display: inline-block;
+  float: left;
+  box-shadow: 1px 1px 14px 2px #c0c0c0;
+  &:hover {
+    box-shadow: 1px 1px 5px 2px grey;
+  }
+
+  span.fa.fa-plus {
+    color: #054927;
+    line-height: 22vw;
+    padding-left: 43%;
+  }
+
+  .mat-card-title {
+    font-family: 'Baloo Bhaijaan', cursive;
+    font-size: 1.25vw;
+    text-align: center;
+    padding: 12% 7.5% 0 7.5%;
+    color: black;
+    margin: 0;
+  }
+  .mat-card-subtitle {
+    font-size: .9vw;
+    padding: 7.5%;
+    margin: 0;
+    border-bottom: .5px solid lightgrey;
+  }
+  img {
+    width: 85%;
+    float: right;
+    margin: 7.5%;
+  }
+}
+
+.packet-detail-header {
+  // font-family: 'Baloo', cursive;
+  // font-family: 'Baloo Tamma', cursive;
+  font-family: 'Baloo Bhaijaan', cursive;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  padding: 1vw 2vw 2vw 2vw;
+  color: #054927;
+}
+
+.packet-title {
+  font-weight: 100;
+}
+
+.packet-desc {
+  font-size: 2vw;
+  font-family: serif;
+  font-family: 'Signika Negative', sans-serif;
+}
