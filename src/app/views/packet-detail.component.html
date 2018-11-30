@@ -1,3 +1,16 @@
 <div class='packet-detail'>
-  <p>this is the packet detail view</p>
+  <header class="packet-detail-header">
+    <h1 class="packet-title">{{this.packet.title}}</h1>
+    <h2 class="packet-desc">{{this.packet.desc}}</h2>
+  </header>
+  <section class="card-container">
+    <mat-card *ngFor="let item of this.packet.items" class="item-card">
+      <mat-card-title>{{item.name}}</mat-card-title>
+      <mat-card-subtitle>{{item.desc}}</mat-card-subtitle>
+      <img mat-card-image src={{item.images[0]}} alt="image"/>
+    </mat-card>
+    <mat-card class="item-card">
+      <span class="fa fa-plus"></span>
+    </mat-card>
+  </section>
 </div>
