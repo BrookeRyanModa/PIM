@@ -19,14 +19,15 @@
 }
 
 .item-card {
-  background-color: #F8F9FA;
-  font-family: 'Signika Negative', sans-serif;
+  background-color: #F1F5F9;
+  overflow: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   width: 23%;
-  height: 25vw;
+  min-height: 33vw;
+  height: auto;
   margin: 1%;
   padding: 0px;
   display: inline-block;
@@ -36,25 +37,43 @@
     box-shadow: 1px 1px 5px 2px grey;
   }
 
-  span.fa.fa-plus {
-    color: #054927;
-    line-height: 22vw;
-    padding-left: 43%;
+  .item-card::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 
+  span.fa.fa-plus {
+    color: lightgray;
+    line-height: 33vw;
+    padding-left: 44%;
+    font-size: 2vw;
+  }
+  //font-family: 'Rubik', sans-serif;
+  //font-family: 'Source Sans Pro', sans-serif;//body
+  //font-family: 'Sunflower', sans-serif;
+  //font-family: 'Quattrocento Sans', sans-serif;//meh
+  //font-family: 'Oswald', sans-serif;
+  //font-family: 'Signika', sans-serif;
+  //font-family: 'Signika Negative', sans-serif;//body
   .mat-card-title {
+    font-family: 'Baloo Paaji', cursive;//packet title
     text-transform: uppercase;
+    font-weight: 200;
     font-size: 1.25vw;
     text-align: center;
-    padding: 12% 7.5% 0 7.5%;
-    color: black;
+    padding: 5% 5% 0 5%;
+    color: #0B502D;
     margin: 0;
   }
   .mat-card-subtitle {
-    font-size: .9vw;
-    padding: 7.5%;
+    height: 4vw;
+    font-size: .85vw;
+    padding: 0 7.5%;
     margin: 0;
     border-bottom: .5px solid lightgrey;
+    font-family: 'Lato', sans-serif;//card name
+
   }
   img {
     width: 85%;
@@ -67,15 +86,18 @@
   font-size: 1.5vw;
   padding: 1vw 2vw 2vw 2vw;
   color: #054927;
-}
 
-.packet-title {
-  font-weight: 100;
-}
+  .packet-title {
+    font-weight: 100;
+    font-family: 'Baloo Paaji', cursive;
+    text-transform: uppercase;
 
-.packet-desc {
-  font-size: 2vw;
-  font-family: serif;
-  padding: .5vw;
-  font-family: 'Signika Negative', sans-serif;
+  }
+
+  .packet-desc {
+    font-size: 2vw;
+    font-family: 'Lato', sans-serif;//card name
+    letter-spacing: .1vw;
+    color: #0B502D;
+  }
 }
