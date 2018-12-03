@@ -13,7 +13,7 @@ $dark-green: #0B502D;
 $darkest-green: #054927; //only pkt title
 $navy: #000033;
 $darkest-navy: #00001E;
-$shadow: 1px 1px 14px 2px #C0C0C0;
+$shadow: 1px 1px 5px 1px #C0C0C0;
 $shadow-hover: 1px 1px 10px 2px $darkest-navy;
 $border: solid $light-grey;
 
@@ -24,11 +24,8 @@ $border: solid $light-grey;
 }
 
 .card-container {
-  padding: 3vw 1vw;
-  border-top: 1px $border;
-  box-shadow: inset $shadow;
   overflow: auto;
-  background-color: $white;
+  padding-right: 2vw;
 }
 .card-container::after {
   content: "";
@@ -37,7 +34,7 @@ $border: solid $light-grey;
 }
 
 .item-card {
-  background-color: $light-blue;
+  background-color: $white;
   border-radius: .25vw;
   overflow: auto;
   top: 0;
@@ -79,6 +76,7 @@ $border: solid $light-grey;
     color: $dark-green;
     margin: 0;
   }
+
   .mat-card-subtitle {
     height: 4vw;
     font-size: .85vw;
@@ -86,8 +84,8 @@ $border: solid $light-grey;
     margin: 0;
     border-bottom: .5px $border;
     font-family: 'Lato', sans-serif;//card name
-
   }
+
   img {
     width: 85%;
     float: right;
@@ -95,21 +93,34 @@ $border: solid $light-grey;
   }
 }
 
-.packet-detail-header {
-  font-size: 1.5vw;
-  padding: 1vw 2vw 2vw 2vw;
+.packet-detail {
+  max-width: 750px ;
+  .packet-detail-header {
+    font-size: 1.25vw;
+    padding: 1vw 2vw 2vw 2vw;
 
-  .packet-title {
-    color: $darkest-green;
-    font-weight: 100;
-    font-family: 'Baloo Paaji', cursive;
-    text-transform: uppercase;
-  }
+    .packet-title {
+      color: $darkest-green;
+      font-weight: 100;
+      font-family: 'Baloo Paaji', cursive;
+      max-font-size: 34px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #A0A0A0;
+      margin-bottom: .5vw;
+    }
 
-  .packet-desc {
-    font-size: 2vw;
-    font-family: 'Lato', sans-serif;//card name
-    letter-spacing: .1vw;
-    color: $navy;
+    .packet-desc {
+      font-size: 2vw;
+      max-font-size: 20px;
+      font-family: 'Lato', sans-serif; //card name
+      letter-spacing: .1vw;
+      color: $navy;
+    }
+    .buyer, .asst-buyer, .notes {
+      font-weight: 100;
+      padding-top: .5vw;
+      max-font-size: 16px;
+    }
   }
 }
+

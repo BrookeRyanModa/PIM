@@ -17,28 +17,55 @@ $shadow: 1px 1px 14px 2px #C0C0C0;
 $shadow-hover: 1px 1px 5px 2px $navy;
 $border: solid $light-grey;
 
+
+//REMOVE UGLY WEBKIT SCROLL BARS
+
+::ng-deep ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::ng-deep ::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+
 .sidenav-container {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: $light-grey;
+  background: $light-blue;
+  padding-right: 5vw;
+
+  mat-vertical-stepper {
+    background-color: inherit;
+
+  }
 }
 
 mat-sidenav {
   background-color: $light-blue;
   padding: 0;
   margin: 0;
-  width: 18%;
-  box-shadow: $shadow;
-  .logo {
-    color: $darkest-navy;
-    margin-top: 2vw;
-    font-size: 3.75vw;
-    text-shadow: 2px 2px white;
-    text-align: center;
-    font-family: 'Titan One', cursive;
+  width: 22%;
+  max-width: 250px;
+  border-left: 1px $border;
+
+  .sidenav-header {
+    width: 100%;
+    max-width: 100%;
+
+    .logo {
+      color: $darkest-navy;
+      margin-top: 2vw;
+      font-size: 3.5vw;
+      text-shadow: 2px 2px white;
+      text-align: center;
+      font-family: 'Titan One', cursive;
+    }
+
   }
 }
 
