@@ -44,7 +44,7 @@
   }
 
   span.fa.fa-plus {// + icon
-    color: $dark-green;
+    color: $navy;
     line-height: $card-height;
     padding-left: 44%;//bring to middle
     font-size: 2vw;
@@ -62,13 +62,15 @@
       font-family: $base-font;
       font-size: 1.2vw;
       line-height: 3vw;
+      color: $green;
+
       i {
         padding-right: 10%;
       }
     }
 
     .mat-card-title {//category
-      color: $dark-green;
+      color: $navy;
       font-size: 1vw;
     }
   }
@@ -104,7 +106,7 @@
     padding: 1vw 2vw 2vw 2vw;
 
     .packet-title {//designer name
-      color: $darkest-green;
+      color: $navy;
       font-weight: 100;
       font-family: $header-font;
       max-font-size: 34px;
@@ -123,7 +125,7 @@
       }
 
       .icons {//download & share header icons
-        color: $dark-green;
+        color: $green;
         float: right;
 
         i {
@@ -141,9 +143,9 @@
     }
 
     .buyer, .asst-buyer, .notes {
+      font-family: $base-font;
       font-weight: 100;
       padding-top: .5vw;
-      max-font-size: 16px;
     }
 
   }

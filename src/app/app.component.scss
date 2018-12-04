@@ -40,12 +40,11 @@ mat-sidenav {
     max-width: 100%;
 
     .logo {
-      color: $darkest-navy;
+      @include logo;
+      color: $navy;
       margin-top: 2vw;
       font-size: 3.5vw;
-      text-shadow: 2px 2px white;
       text-align: center;
-      font-family: 'Titan One', cursive;
     }
 
   }
