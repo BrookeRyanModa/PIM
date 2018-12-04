@@ -1,0 +1,136 @@
+//vars
+
+$card-width: 23%;
+$card-width-mobile: 23%;
+$card-height: 33vw;
+$card-height-mobile: 33vw;
+
+//colors
+$white: #FCFCFD;
+$light-grey: #EEE;
+$light-blue: #F1F5F9;
+$dark-green: #0B502D;
+$darkest-green: #054927; //only pkt title
+$navy: #000033;
+$darkest-navy: #00001E;
+$shadow: 1px 1px 5px 1px #C0C0C0;
+$shadow-hover: 1px 1px 10px 2px $darkest-navy;
+$border: solid $light-grey;
+
+::ng-deep * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.card-container {
+  overflow: auto;
+  padding-right: 2vw;
+}
+.card-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.item-card {
+  background-color: $white;
+  border-radius: .25vw;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: $card-width;
+  min-height: $card-height;
+  height: auto;
+  margin: 1%;
+  padding: 0px;
+  display: inline-block;
+  float: left;
+  box-shadow: $shadow;
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
+
+  .item-card::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  span.fa.fa-plus {
+    color: $dark-green;
+    line-height: 33vw;
+    padding-left: 44%;
+    font-size: 2vw;
+  }
+
+  .mat-card-title {
+    font-family: 'Baloo Paaji', cursive;//packet title
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.25vw;
+    text-align: center;
+    padding: 5% 5% 0 5%;
+    color: $dark-green;
+    margin: 0;
+  }
+
+  .mat-card-subtitle {
+    height: 4vw;
+    font-size: .85vw;
+    padding: 0 7.5%;
+    margin: 0;
+    border-bottom: .5px $border;
+    font-family: 'Lato', sans-serif;//card name
+  }
+
+  img {
+    width: 85%;
+    float: right;
+    margin: 7.5%;
+  }
+}
+
+.packet-detail {
+  max-width: 750px ;
+  .packet-detail-header {
+    font-size: 1.25vw;
+    padding: 1vw 2vw 2vw 2vw;
+
+    .packet-title {
+      color: $darkest-green;
+      font-weight: 100;
+      font-family: 'Baloo Paaji', cursive;
+      max-font-size: 34px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #A0A0A0;
+      margin-bottom: .5vw;
+      a {
+        text-transform: none;
+        height: 3vw;
+        line-height: 3vw;
+        width: 3vw;
+        margin: 0 0 1.5vw 2vw;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.2vw;
+        // padding-bottom: .25vw;
+
+      }
+    }
+
+    .packet-desc {
+      font-size: 2vw;
+      max-font-size: 20px;
+      font-family: 'Lato', sans-serif; //card name
+      letter-spacing: .1vw;
+      color: $navy;
+    }
+    .buyer, .asst-buyer, .notes {
+      font-weight: 100;
+      padding-top: .5vw;
+      max-font-size: 16px;
+    }
+  }
+}
