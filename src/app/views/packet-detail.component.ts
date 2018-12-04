@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Packet } from './packet';
 import { Item } from './item';
-// import { ItemDetailComponent } from './item-detail.component';
 
 @Component({
   templateUrl: 'packet-detail.component.html',
