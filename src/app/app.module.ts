@@ -8,6 +8,8 @@ import { ItemDetailComponent } from './views/item-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
+import { MatStepperModule } from '@angular/material/stepper';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
