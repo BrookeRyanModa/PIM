@@ -16,8 +16,16 @@
     <span class='fa fa-plus'></span>
   </mat-card>
   <mat-card *ngFor='let item of this.packet.items' class='item-card'>
-    <mat-card-title>{{item.name}}</mat-card-title>
-    <mat-card-subtitle>{{item.desc}}</mat-card-subtitle>
-    <img mat-card-image src={{item.images[0]}} alt='image'/>
+    <article class='card-header'>
+      <mat-card-title>{{item.category}}, {{item.style_number}}</mat-card-title>
+    </article>
+    <article class='card-img'>
+      <img mat-card-image src={{item.images[0]}} alt='image'/>
+    </article>
+    <article class='card-footer'>
+      <p>
+        User: Tom Hanks - updated: 12/3/2018, 3:34PM
+      </p>
+    </article>
   </mat-card>
 </section>

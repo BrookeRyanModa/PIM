@@ -1,14 +1,14 @@
 
 export class Item {
   packetId: number;
-  name: string;
-  desc: string;
+  category: string;
+  style_number: string;
   images: HTMLImageElement[];
 
-  constructor(name, desc, images, packetId?) {
+  constructor(category, style_number, images, packetId?) {
     this.packetId = packetId;
-    this.name = name;
-    this.desc = desc;
+    this.category = category;
+    this.style_number = style_number;
     this.images = images;
   }
 }
