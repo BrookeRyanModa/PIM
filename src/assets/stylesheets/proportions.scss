@@ -1,10 +1,20 @@
 //proportions
 $card-width: 23%;
-$card-width-mobile: 23%;
 $card-height: 32vw;
-$card-height-mobile: 32vw;
 
 //card div heights
 $card-header: 5vw;
 $card-img: 22vw;
 $card-footer: 3.5vw;
+
+// --- tablet/mobile --- //
+
+//proportions
+$card-width-sm: 45%;
+$card-height-sm: 78vw;
+
+//card div heights
+$card-header-sm: 11vw;
+$card-img-sm: 15vw;
+$card-footer-sm: 11vw;
+

@@ -11,7 +11,6 @@
   background: #FF0000;
 }
 
-
 .sidenav-container {
   position: absolute;
   top: 0;
@@ -52,7 +51,45 @@ mat-sidenav {
 
 mat-sidenav-content {
   padding: 3%;
-
 }
 
+@media (max-width: 768px) {
+  mat-sidenav {
+    width: 0px;
+    border: none;
+  }
+
+  mat-sidenav-content {
+    padding: 0;
+  }
+
+  .sidenav-container {
+    padding: 0px;
+
+    i { //to remove arrows
+      &.fas.fa-angle-left, &.fas.fa-angle-right {
+        display: none;
+      }
+    }
+
+    .mobile-header {
+      padding-top: 1vw;
+      height: 13vw;
+      background-color: $white;
+      margin-bottom: 2vw;
+      width: 100%;
+      z-index: 1000;
+      position: fixed;
+
+      .mobile-logo {
+        @include logo;
+        line-height: 12vw;
+        font-size: 7.5vw;
+        text-align: center;
+      }
+
+    }
+
+  }
+}
 
