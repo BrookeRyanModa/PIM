@@ -1,11 +1,11 @@
 //proportions
 $card-width: 23%;
 $card-width-mobile: 23%;
-$card-height: 33vw;
-$card-height-mobile: 33vw;
+$card-height: 32vw;
+$card-height-mobile: 32vw;
 
 //card div heights
-$card-header: 7.5vw;
+$card-header: 5vw;
 $card-img: 22vw;
 $card-footer: 3.5vw;
 
@@ -80,10 +80,18 @@ $base-font: 'Lato', sans-serif;
     height: $card-header;
     font-family: $base-font;
     text-align: center;
-    //text-transform: uppercase;
     font-weight: 100;
     margin: 0;
     border-bottom: .5px $border;
+
+    .card-icons {
+      font-family: $base-font;
+      font-size: 1.2vw;
+      line-height: 3vw;
+      i {
+        padding-right: 10%;
+      }
+    }
 
     .mat-card-title {//category
       color: $dark-green;

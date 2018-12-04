@@ -17,6 +17,16 @@
   </mat-card>
   <mat-card *ngFor='let item of this.packet.items' class='item-card'>
     <article class='card-header'>
+      <h1 class='card-icons'>
+        <i class="fa fa-cog" aria-hidden="true">
+          <!--<a href="#"/>-->
+        </i>
+        <i class="fa fa-camera" aria-hidden="true">
+          <!--<a href="#"/>-->
+        </i>
+        {{item.images.length}}
+
+      </h1>
       <mat-card-title>{{item.category}}, {{item.style_number}}</mat-card-title>
     </article>
     <article class='card-img'>
