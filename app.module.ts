@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { PacketDetailComponent } from './views/packet-detail.component';
-import { ItemDetailComponent } from './views/item-detail.component';
+import { PacketDetailComponent } from './item/packet-detail.component';
+import { ItemDetailComponent } from './item/item-detail.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material';

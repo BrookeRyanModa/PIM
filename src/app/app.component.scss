@@ -1,22 +1,4 @@
-//vars
-
-$card-width: 23%;
-$card-width-mobile: 23%;
-$card-height: 33vw;
-$card-height-mobile: 33vw;
-
-//colors
-$white: #FCFCFD;
-$light-grey: #EEE;
-$light-blue: #F1F5F9;
-$dark-green: #0B502D;
-$darkest-green: #054927; //only pkt title
-$navy: #000033;
-$darkest-navy: #00001E;
-$shadow: 1px 1px 14px 2px #C0C0C0;
-$shadow-hover: 1px 1px 5px 2px $navy;
-$border: solid $light-grey;
-
+@import '../imports';
 
 //REMOVE UGLY WEBKIT SCROLL BARS
 
@@ -28,7 +10,6 @@ $border: solid $light-grey;
 ::ng-deep ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
-
 
 .sidenav-container {
   position: absolute;
@@ -58,12 +39,11 @@ mat-sidenav {
     max-width: 100%;
 
     .logo {
-      color: $darkest-navy;
+      @include logo;
+      color: $navy;
       margin-top: 2vw;
       font-size: 3.5vw;
-      text-shadow: 2px 2px white;
       text-align: center;
-      font-family: 'Titan One', cursive;
     }
 
   }
@@ -71,7 +51,45 @@ mat-sidenav {
 
 mat-sidenav-content {
   padding: 3%;
-
 }
 
+@media (max-width: 768px) {
+  mat-sidenav {
+    width: 0px;
+    border: none;
+  }
+
+  mat-sidenav-content {
+    padding: 0;
+  }
+
+  .sidenav-container {
+    padding: 0px;
+
+    i { //to remove arrows
+      &.fas.fa-angle-left, &.fas.fa-angle-right {
+        display: none;
+      }
+    }
+
+    .mobile-header {
+      padding-top: 1vw;
+      height: 13vw;
+      background-color: $white;
+      margin-bottom: 2vw;
+      width: 100%;
+      z-index: 1000;
+      position: fixed;
+
+      .mobile-logo {
+        @include logo;
+        line-height: 12vw;
+        font-size: 7.5vw;
+        text-align: center;
+      }
+
+    }
+
+  }
+}
 

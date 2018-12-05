@@ -1,10 +1,10 @@
-import { Item } from './item';
+import { ItemModel } from '../item/item.model';
 
-export class Packet {
+export class PacketModel {
   id: number;
   title: string;
   desc: string;
-  items: Item[];
+  items: ItemModel[];
 
   constructor(id, title, desc, items?) {
     this.id = id;

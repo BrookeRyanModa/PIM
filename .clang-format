@@ -1,0 +1,25 @@
+# Full List of Clang Format Style Options: http://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: Google
+
+Language:     JavaScript
+ColumnLimit:  100
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+
+AlignAfterOpenBracket: Align
+AllowShortBlocksOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: true
+BreakBeforeBraces: Custom
+BraceWrapping:
+  BeforeCatch: true
+  BeforeElse: true
+JavaScriptWrapImports: true
+
+# Penalties
+# This section informs what to prioritize/override when a line is too long.
+PenaltyBreakAssignment: 100
+PenaltyReturnTypeOnItsOwnLine: 10
+PenaltyBreakBeforeFirstCallParameter: 30

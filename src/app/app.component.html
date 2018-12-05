@@ -5,34 +5,17 @@
         {{ title }}
       </h1>
     </div>
-    <mat-vertical-stepper #stepper>
-      <mat-step [state]='buy' class='state-one'>
-        <p>
-          packet buy
-        </p>
-      </mat-step>
-      <mat-step [state]='assemble' class='state-two'>
-        <p>
-          packet assembly
-        </p>
-      </mat-step>
-      <mat-step [state]='newImages' class='state-three'>
-        <p>
-          image production
-        </p>
-      </mat-step>
-      <mat-step [state]='retouch' class='state-four'>
-        <p>
-          image retouch
-        </p>
-      </mat-step>
-
-
-    </mat-vertical-stepper>
   </mat-sidenav>
   <mat-sidenav-content>
-    <span *ngIf="!opened"(click)="sidenav.toggle()" class="fas fa-angle-right"></span>
-    <span *ngIf="opened"(click)="sidenav.toggle()" class="fas fa-angle-left"></span>
+    <header *ngIf='this.mobileState' class='mobile-header'>
+      <h1 class="mobile-logo">
+        {{ title }}
+      </h1>
+    </header>
+    <header *ngIf='!this.mobileState'>
+      <span *ngIf="!opened"(click)="sidenav.toggle()" class="fas fa-angle-right"></span>
+      <span *ngIf="opened"(click)="sidenav.toggle()" class="fas fa-angle-left"></span>
+    </header>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

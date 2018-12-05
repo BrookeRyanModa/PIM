@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from './item';
+import { ItemModel } from './item.model';
 
 @Component({
   selector: 'item-detail',
@@ -8,6 +8,6 @@ import { Item } from './item';
 })
 
 export class ItemDetailComponent {
-  item: Item;
+  item: ItemModel;
 
 }

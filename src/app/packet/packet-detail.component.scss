@@ -1,0 +1,261 @@
+@import '../../imports';
+
+::ng-deep * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.card-container {
+  overflow: auto;
+  padding-right: 2vw;
+}
+//clearfix for card container - keep
+.card-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.item-card {
+  background-color: $white;
+  border-radius: .25vw;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: $card-width;
+  min-height: $card-height;
+  height: auto;
+  margin: 1%;
+  padding: 0px;
+  display: inline-block;
+  float: left;
+  box-shadow: $shadow;
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
+
+  .item-card::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  span.fa.fa-plus {// + icon
+    color: $navy;
+    line-height: $card-height;
+    padding-left: 44%;//bring to middle
+    font-size: 2vw;
+  }
+
+  .card-header {
+    height: $card-header;
+    font-family: $base-font;
+    text-align: center;
+    font-weight: 100;
+    margin: 0;
+    border-bottom: .5px $border;
+
+    .card-icons {
+      font-family: $base-font;
+      font-size: 1.2vw;
+      line-height: 3vw;
+      color: $green;
+
+      i {
+        padding-right: 10%;
+      }
+    }
+
+    .mat-card-title {//category
+      color: $navy;
+      font-size: 1vw;
+    }
+  }
+
+  .card-img {//first (preview) image
+    height: $card-img;
+    width: auto;
+    img {
+      width: 85%;
+      float: right;
+      margin: 7.5%;
+    }
+  }
+
+  .card-footer {
+    height: $card-footer;
+    font-size: .75vw;
+    font-family: $base-font;
+    padding: 0 1vw;
+
+  }
+
+
+}
+
+// --- PacketModel Details --- //
+
+.packet-detail {
+  max-width: 750px ;
+
+  .packet-detail-header {
+    font-size: 1.25vw;
+    padding: 1vw 2vw 2vw 2vw;
+
+    .packet-title {//designer name
+      color: $navy;
+      font-weight: 100;
+      font-family: $header-font;
+      max-font-size: 34px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #A0A0A0;
+      margin-bottom: .5vw;
+
+      a {//edit button
+        text-transform: none;
+        height: 3vw;
+        line-height: 3vw;
+        width: 3vw;
+        margin: 0 0 1.5vw 2vw;
+        font-family: $base-font;
+        font-size: 1.2vw;
+      }
+
+      .icons {//download & share header icons
+        color: $green;
+        float: right;
+
+        i {
+          padding: 0 1vw;
+        }
+      }
+
+    }
+
+    .packet-desc {//season
+      font-size: 1.5vw;
+      font-family: $base-font;
+      letter-spacing: .1vw;
+      color: $navy;
+    }
+
+    .buyer, .asst-buyer, .notes {
+      font-family: $base-font;
+      font-weight: 100;
+      padding-top: .5vw;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    padding-right: 0px;
+    padding: 3%;
+  }
+
+  .item-card {
+    width: $card-width-sm;
+    height: auto;
+    overflow: hidden;
+    min-height: $card-height-sm;
+    margin: 2.5%;
+
+    span.fa.fa-plus { // + icon
+      color: $green;
+      line-height: $card-height-sm;
+      padding-left: 44%; //bring to middle
+      font-size: 6vw;
+    }
+
+    .card-header {
+      height: $card-header-sm;
+      border-bottom: 1px $border;
+
+      .card-icons {
+        font-size: 3vw;
+        line-height: 8vw;
+
+        i {
+          padding-right: 10%;
+        }
+      }
+
+      .mat-card-title { //category
+        font-size: 2.5vw;
+      }
+    }
+
+    .card-img {//first (preview) image
+      height: 53vw;
+      width: auto;
+      img {
+        max-height: 100%;
+        width: auto;
+        margin: 3% 12.5%;
+      }
+    }
+
+    .card-footer {
+      height: $card-footer-sm;
+      font-size: 2vw;
+      padding: 0 2vw;
+
+    }
+  }
+
+    // --- PacketModel Details --- //
+
+  .packet-detail {
+    margin-top: 15vw;
+    width: 100%;
+    padding: 3vw 3vw 0 3vw;
+
+    .packet-detail-header {
+      font-size: 2.5vw;
+      padding: 1vw 2vw 2vw 2vw;
+
+      .packet-title { //designer name
+        color: $navy;
+        font-weight: 100;
+        font-family: $header-font;
+        max-font-size: 34px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #A0A0A0;
+        margin-bottom: .5vw;
+
+        a { //edit button
+          text-transform: none;
+          height: 6vw;
+          line-height: 6vw;
+          width: 3vw;
+          margin: 0 0 3vw 4vw;
+          font-family: $base-font;
+          font-size: 2.5vw;
+        }
+
+        .icons { //download & share header icons
+          color: $green;
+          float: right;
+
+          i {
+            padding: 0 1vw;
+          }
+
+        }
+      }
+
+      .packet-desc { //season
+        font-size: 3vw;
+      }
+
+      .buyer, .asst-buyer, .notes {
+        padding-top: 1vw;
+      }
+    }
+  }
+
+}
