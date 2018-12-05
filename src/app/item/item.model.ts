@@ -1,5 +1,5 @@
 
-export class Item {
+export class ItemModel {
   packetId: number;
   category: string;
   style_number: string;

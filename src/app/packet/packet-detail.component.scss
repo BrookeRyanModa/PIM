@@ -1,4 +1,4 @@
-@import '../../imports.scss';
+@import '../../imports';
 
 ::ng-deep * {
   box-sizing: border-box;
@@ -96,7 +96,7 @@
 
 }
 
-// --- Packet Details --- //
+// --- PacketModel Details --- //
 
 .packet-detail {
   max-width: 750px ;
@@ -207,7 +207,7 @@
     }
   }
 
-    // --- Packet Details --- //
+    // --- PacketModel Details --- //
 
   .packet-detail {
     margin-top: 15vw;
