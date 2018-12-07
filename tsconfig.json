@@ -7,12 +7,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom", "es2017.object" ],
-//    "strict": true,
-//    "suppressImplicitAnyIndexErrors": true,
-//    "removeComments": false,
-//    "noUnusedLocals": true,
-//    "noUnusedParameters": true,
-//    "skipLibCheck": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "removeComments": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
     "typeRoots": [
       "../node_modules/@types/"
     ]
