@@ -10,6 +10,36 @@ const routes: Routes = [
   { path: 'item', component: ItemDetailComponent },
 
 ];
+// const routes: Routes = [
+//   { path: '', redirectTo: 'packet', pathMatch: 'full' },
+//   { path: 'packets',
+//     component: PacketListComponent,
+//     children: [
+//       { path: 'new',
+//         children: generateRoutes('packet', CreatePacketComponent)
+//       },
+//       { path: ':packetId',
+//         children: generateRoutes('packet', PacketDetailComponent)
+//       },
+//       { path: ':packetId/edit',
+//         children: generateRoutes('packet', PacketUpdateComponent)
+//       }
+//     ]
+//   },
+//   { path: 'items', component: ItemListComponent,
+//     children: [
+//       { path: 'new',
+//         children: generateRoutes('item', CreateItemComponent)
+//       },
+//       { path: ':style_number',
+//         children: generateRoutes('item', ItemDetailComponent)
+//       },
+//       { path: ':style_number/edit',
+//         children: generateRoutes('item', ItemUpdateComponent)
+//       }
+//     ]
+//   }
+// ];
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
