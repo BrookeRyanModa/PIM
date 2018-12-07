@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemModel } from './item.model';
+import { Component } from '@angular/core';
+// import { Item } from './item.model';
+// import {Observable} from 'rxjs';
 
 @Component({
   selector: 'item-detail',
@@ -8,6 +9,6 @@ import { ItemModel } from './item.model';
 })
 
 export class ItemDetailComponent {
-  item: ItemModel;
+  // item: Observable<Item>;
 
 }

@@ -1,12 +1,16 @@
-import { ItemModel } from '../item/item.model';
+import { Item } from '../item/item.model';
 
-export class PacketModel {
+export class Packet {
   id: number;
   title: string;
   desc: string;
-  items: ItemModel[];
+  items: Item[];
 
-  constructor(id, title, desc, items?) {
+  constructor( id: number,
+               title: string,
+               desc: string,
+               items: Item[]
+              ) {
     this.id = id;
     this.title = title;
     this.desc = desc;
