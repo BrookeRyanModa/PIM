@@ -12,6 +12,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
 import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatSidenavModule,
     MatCardModule,
     MatButtonModule,
+    MatListModule,
     MatStepperModule
   ],
   providers: [],
