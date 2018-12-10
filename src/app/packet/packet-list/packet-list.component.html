@@ -15,17 +15,17 @@
       </button>
     </div>
   </header>
-  <ul class='packets'>
-    <li class='packet'>
+  <mat-list class='packets'>
+    <mat-list-item class='packet'>
       <h3>
         Create New Packet
       </h3>
       <button class='add-packet-button'>
         <i class='fa fa-plus'></i>
       </button>
-    </li>
-    <li>
+    </mat-list-item>
     <!--<li class='packet' *ngFor='let packet of Packets'>-->
+    <mat-list-item>
       <h3 class='packet-list-name'>
         {{packet.title}}, {{packet.desc}}
       </h3>
@@ -40,6 +40,6 @@
           <i class="fa fa-pencil" aria-hidden="true"></i>
         </button>
       </div>
-    </li>
-  </ul>
+    </mat-list-item>
+  </mat-list>
 </div>
