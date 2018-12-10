@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PacketDetailComponent } from './packet/packet-detail.component';
 import { ItemDetailComponent } from './item/item-detail.component';
+import { PacketListComponent } from './packet/packet-list/packet-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'packet', pathMatch: 'full' },
   { path: 'packet', component: PacketDetailComponent },
-  { path: 'item', component: ItemDetailComponent },
+  { path: 'packets', component: PacketListComponent },
+  { path: 'item', component: ItemDetailComponent }
 
 ];
 // const routes: Routes = [
