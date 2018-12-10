@@ -1,0 +1,44 @@
+@import '../../../imports';
+
+.packet-list {
+  max-width: 750px ;
+
+  .packet-list-header {
+    font-size: 1.25vw;
+    padding: 1vw 2vw 2vw 2vw;
+
+    .packet-list-title {//designer name
+      color: $navy;
+      font-weight: 100;
+      font-family: $header-font;
+      max-font-size: 34px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #A0A0A0;
+      margin-bottom: .5vw;
+
+      .icons {//download & share header icons
+        color: $green;
+        float: right;
+
+        i {
+          padding: 0 1vw;
+        }
+      }
+
+    }
+
+    .packet-desc {//season
+      font-size: 1.5vw;
+      font-family: $base-font;
+      letter-spacing: .1vw;
+      color: $navy;
+    }
+
+    .buyer, .asst-buyer, .notes {
+      font-family: $base-font;
+      font-weight: 100;
+      padding-top: .5vw;
+    }
+
+  }
+}

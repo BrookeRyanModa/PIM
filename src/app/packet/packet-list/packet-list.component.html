@@ -1,0 +1,45 @@
+<div class='packet-list'>
+  <header class='packet-list-header'>
+    <h1 class='packet-list-title'>
+      Packets
+    </h1>
+    <div class='filter-list-buttons'>
+      <button>
+        all
+      </button>
+      <button>
+        Trunkshows
+      </button>
+      <button>
+        Boutique
+      </button>
+    </div>
+  </header>
+  <ul class='packets'>
+    <li class='packet'>
+      <h3>
+        Create New Packet
+      </h3>
+      <button class='add-packet-button'>
+        <i class='fa fa-plus'></i>
+      </button>
+    </li>
+
+    <li class='packet' *ngFor='let packet of Packets'>
+      <h3 class='packet-list-name'>
+        {{packet.title}}, {{packet.desc}}
+      </h3>
+      <div class='list-edit-buttons'>
+        <button>
+          BT
+        </button>
+        <button>
+          TS
+        </button>
+        <button>
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

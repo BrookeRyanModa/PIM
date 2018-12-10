@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItemDetailComponent } from './item/item-detail.component';
 import { PacketDetailComponent } from './packet/packet-detail.component';
-// import { PacketListComponent } from './packet/packet-list/packet-list.component';
+import { PacketListComponent } from './packet/packet-list/packet-list.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -18,8 +18,8 @@ import { MatStepperModule } from '@angular/material/stepper';
   declarations: [
     AppComponent,
     ItemDetailComponent,
-    PacketDetailComponent
-    // PacketListComponent
+    PacketDetailComponent,
+    PacketListComponent
   ],
   imports: [
     AppRoutingModule,
