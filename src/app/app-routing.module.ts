@@ -7,7 +7,7 @@ import { ItemDetailComponent } from './item/item-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: 'packet', pathMatch: 'full' },
   { path: 'packet', component: PacketDetailComponent },
-  { path: 'item', component: ItemDetailComponent },
+  { path: 'item', component: ItemDetailComponent }
 
 ];
 // const routes: Routes = [
