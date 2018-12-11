@@ -19,13 +19,22 @@
     .mat-chip-list {
       .mat-chip {
         top: 0;
-        margin: .5vw 1vw 0 0;
-        padding: 0 2vw;
+        margin: .5vw .5vw 0 0;
+        padding: 0 1vw;
         border-radius: .75vw;
         border: .5px solid white;
         &.selected {
           background-color: $green;
           color: white;
+        }
+        @include BTorTS-icons;
+        .mat-chip {
+          border-radius: 1.5vw;
+          padding: 0 .5vw;
+          font-size: 1.1vw;
+          margin: 0 0 0 1vw;
+          min-height: 0;
+          height: 60%;
         }
       }
 
@@ -50,20 +59,19 @@
           width: 90%;
           font-weight: 100;
         }
-        i {
-          margin-left: 43vw;
+        .add-packet-icon {
+          box-sizing: border-box;
           width: 10%;
+
+          i, i::before {
+            width: 100%;
+            padding-left: 40%;
+          }
         }
+
       }
       .mat-chip-list {
-        .mat-chip {
-          top: 0;
-          margin: 1.65vw .5vw 0 0;
-          padding: 0 1vw;
-          background-color: white;
-          color: $navy;
-          border: .5px solid $light-grey;
-        }
+        @include BTorTS-icons;
       }
     }
   }
@@ -84,7 +92,14 @@
           margin: 2.5vw 2vw 0 0;
           padding: 0 2vw;
           border-radius: 1.5vw;
-
+          .mat-chip {
+            border-radius: 2vw;
+            padding: 0 1vw;
+            font-size: 2.5vw;
+            margin: 0 0 0 1vw;
+            min-height: 0;
+            height: 60%;
+          }
         }
       }
     }

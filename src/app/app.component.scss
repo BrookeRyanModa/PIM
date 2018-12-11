@@ -83,6 +83,7 @@ mat-sidenav-content {
 
       .mobile-logo {
         @include logo;
+        color: $navy;
         line-height: 12vw;
         font-size: 7.5vw;
         text-align: center;

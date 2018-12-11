@@ -56,7 +56,7 @@ export class PacketDetailComponent implements OnInit {
           "https://c1.staticflickr.com/5/4775/26939814418_2a56d220e2_o.jpg"]
       )
     ];
-    this.packet = new Packet(1, 'Oscar de la Renta', 'SS19', this.myItems);
+    this.packet = new Packet(1, "2018-12-05T19:20+01:00",'Oscar de la Renta', 'SS19', this.myItems);
   }
 
 
