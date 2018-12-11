@@ -12,11 +12,12 @@
       font-weight: 100;
       font-family: $header-font;
       text-transform: uppercase;
-      border-bottom: 1px solid #A0A0A0;
-      margin-bottom: .5vw;
+      border-bottom: 1px solid $dark-grey;
+      margin-bottom: 1vw;
       max-font-size: 17.5px;
     }
     .mat-chip-list {
+      align-items: center;
       .mat-chip {
         top: 0;
         margin: .5vw .5vw 0 0;
@@ -44,9 +45,15 @@
     }
   }
   .mat-list {
-
+    .packet-date {
+      text-transform: uppercase;
+      font-family: $header-font;
+      font-size: 2vw;
+      font-weight: 100;
+      margin: 2vw 0 1vw 0;
+      border-bottom: 1px solid $dark-grey;
+    }
     .mat-list-item {
-
       background-color: white;
       margin: .5vw;
       border-radius: .25vw;
@@ -128,29 +135,52 @@
     }
 
     .mat-list {
+      .packet-date {
+        font-size: 5vw;
+        margin: 2vw 0 1vw 0;
+      }
       .mat-list-item {
         margin: 2vw 0;
         border-radius: 1vw;
+        &.packet {
+          width: 100%;
+          .packet-list-name {
+            font-size: 4vw;
+            width: 100%;
+          }
+          .list-edit-buttons {
+            width: 30%;
+            .mat-chip-list {
+              .mat-chip {
+                border-radius: 4vw;
+                top: 0;
+                font-size: 3vw;
+                margin: 0 0 0 2vw;
+                padding: 0 2vw;
+              }
+            }
+          }
 
+        }
         &.create-packet {
           h3 {
             font-size: 4vw;
-            width: 90%;
-            font-weight: 100;
+            width: 60%;
           }
           i {
-            margin-left: 43vw;
-            width: 10%;
+            width: 30%;
+            margin-left: 23vw;
           }
         }
         .mat-chip-list {
           .mat-chip {
             top: 0;
-            margin: 5vw 2.5vw 0 0;
-            padding: 0 2vw;
+            margin:0;
+            padding: 0;
           }
         }
       }
     }
   }
+
 }

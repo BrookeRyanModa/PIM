@@ -33,29 +33,27 @@
         <i class='fa fa-plus'></i>
       </div>
     </mat-list-item>
-    <div class='date-wrapper' *ngFor='let month of months'>
-      <div class='date-wrapper' *ngFor='let packet of packets'>
-        <h3 *ngIf='packet.created_at === month' class='packet-date'>
+    <div *ngFor='let packet of packets'>
+      <div class='date-wrapper' *ngFor='let month of months'>
+        <h3 *ngIf='packet.created_at == month' class='packet-date'>
           {{packet.created_at | date: 'MMMM'}}
         </h3>
-        <mat-list-item class='packet' >
-          <h3 class='packet-list-name'>
-            {{packet.title}}, {{packet.desc}}
-          </h3>
-          <div class='list-edit-buttons'>
-            <mat-chip-list>
-              <mat-chip>
-                BT
-              </mat-chip>
-              <mat-chip>
-                TS
-              </mat-chip>
-            </mat-chip-list>
-          </div>
-        </mat-list-item>
       </div>
+      <mat-list-item class='packet' >
+        <h3 class='packet-list-name'>
+          {{packet.title}}, {{packet.desc}}
+        </h3>
+        <div class='list-edit-buttons'>
+          <mat-chip-list>
+            <mat-chip>
+              BT
+            </mat-chip>
+            <mat-chip>
+              TS
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+      </mat-list-item>
     </div>
-
-
   </mat-list>
 </div>

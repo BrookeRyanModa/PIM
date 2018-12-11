@@ -38,6 +38,9 @@ mat-sidenav {
     width: 100%;
     max-width: 100%;
 
+    nav a {
+      text-decoration: none;
+    }
     .logo {
       @include logo;
       color: $navy;
@@ -57,10 +60,16 @@ mat-sidenav-content {
   mat-sidenav {
     width: 0px;
     border: none;
+
   }
 
   mat-sidenav-content {
     padding: 0;
+    .mobile-header {
+      nav a {
+        text-decoration: none;
+      }
+    }
   }
 
   .sidenav-container {
