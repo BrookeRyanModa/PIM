@@ -10,9 +10,11 @@ import { PacketListComponent } from './packet/packet-list/packet-list.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
@@ -29,8 +31,10 @@ import { MatStepperModule } from '@angular/material/stepper';
     LayoutModule,
     MatSidenavModule,
     MatCardModule,
+    MatChipsModule,
     MatButtonModule,
     MatListModule,
+    MatIconModule,
     MatStepperModule
   ],
   providers: [],
