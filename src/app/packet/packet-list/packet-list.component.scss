@@ -27,12 +27,15 @@
           background-color: $green;
           color: white;
         }
-        @include BTorTS-icons;
         .mat-chip {
+          background-color: white;
+          color: $navy;
+          border: .5px solid $light-grey;
           border-radius: 1.5vw;
+          top: 0;
+          margin: 0 0 0 .5vw;
           padding: 0 .5vw;
           font-size: 1.1vw;
-          margin: 0 0 0 1vw;
           min-height: 0;
           height: 60%;
         }
@@ -41,13 +44,35 @@
     }
   }
   .mat-list {
+
     .mat-list-item {
+
       background-color: white;
       margin: .5vw;
       border-radius: .25vw;
       box-shadow: $shadow;
       &:hover {
         box-shadow: $shadow-hover;
+      }
+      &.packet {
+        h3 {
+          font-family: $base-font;
+          font-size: 1.5vw;
+          width: 87%;
+          font-weight: 100;
+        }
+        .mat-chip-list {
+          width: 100%;
+          .mat-chip {
+            float: right;
+            top: 0;
+            margin: 0 0 0 1vw;
+            padding: 0 .65vw;
+            background-color: white;
+            color: $navy;
+            border: .5px solid $light-grey;
+          }
+        }
       }
 
       &.create-packet {
@@ -70,9 +95,7 @@
         }
 
       }
-      .mat-chip-list {
-        @include BTorTS-icons;
-      }
+
     }
   }
 }

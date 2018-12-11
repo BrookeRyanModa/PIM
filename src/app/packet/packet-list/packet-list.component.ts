@@ -8,6 +8,7 @@ import { Packet } from '../packet.model';
 })
 export class PacketListComponent implements OnInit {
   packets: Packet[] = [];
+  months: string[];
   // selected: string ='';
 
   ngOnInit() {
@@ -20,11 +21,23 @@ export class PacketListComponent implements OnInit {
       new Packet(7, "2018-11-03T19:20+01:00","Danse Lente", "SS19", []),
       new Packet(8, "2018-11-03T19:20+01:00","Yeon", "SS19", []),
     ];
-    // this.selected = 'all';
+    this.months = this.getMonths();
+    console.log(this.months)
   }
   //
   // onPacketFilter(filter: string){
   //   this.selected = filter;
   // }
+  getMonths() {
+    let myMonths = [];
+    let myDates = [];
+    for(let packet of this.packets) {
+      if (packet['created_at'].slice(5,7) !== myMonths[myMonths.length-1]) {
+        myMonths.push(packet['created_at'].slice(5,7));
+        myDates.push(packet['created_at']);
+      }
+    }
+    return myDates;
+  }
 
 }

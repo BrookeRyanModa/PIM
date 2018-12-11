@@ -8,10 +8,10 @@ export class Packet {
   items: Item[];
 
   constructor(id: number,
-               created_at: string,
-               title: string,
-               desc: string,
-               items: Item[]
+              created_at: string,
+              title: string,
+              desc: string,
+              items: Item[]
               ) {
     this.id = id;
     this.created_at = created_at;
