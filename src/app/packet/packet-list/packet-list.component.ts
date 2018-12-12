@@ -8,7 +8,7 @@ import { Packet } from '../packet.model';
 })
 export class PacketListComponent implements OnInit {
   packets: Packet[] = [];
-  months: string[];
+  months: string[] = [];
   // selected: string ='';
 
   ngOnInit() {
@@ -24,10 +24,7 @@ export class PacketListComponent implements OnInit {
     this.months = this.getMonths();
     console.log(this.months)
   }
-  //
-  // onPacketFilter(filter: string){
-  //   this.selected = filter;
-  // }
+
   getMonths() {
     let myMonths = [];
     let myDates = [];

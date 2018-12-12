@@ -3,8 +3,8 @@ import { Packet } from '../packet.model';
 import { Item } from '../../item/item.model';
 
 @Component({
-  templateUrl: 'packet-detail/packet-detail.component.html',
-  styleUrls: ['packet-detail/packet-detail.component.scss']
+  templateUrl: 'packet-detail.component.html',
+  styleUrls: ['packet-detail.component.scss']
 })
 
 export class PacketDetailComponent implements OnInit {

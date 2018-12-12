@@ -7,6 +7,7 @@ import { ItemDetailComponent } from './item/item-detail.component';
 import { PacketDetailComponent } from './packet/packet-detail/packet-detail.component';
 import { PacketListComponent } from './packet/packet-list/packet-list.component';
 import { PacketNewComponent } from './packet/packet-new/packet-new.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material';
