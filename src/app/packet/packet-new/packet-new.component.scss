@@ -18,12 +18,15 @@
   margin-left: 3vw;
   border: .5px solid $white;
   background-color: $light-blue;
-  border-radius: .2vw;
+  border-radius: .25vw;
   box-shadow: 1px 1px 5px 1px #404040;
   a {
     width: 100%;
     padding-left: 97%;
     line-height: 4vw;
+    text-decoration: none;
+    color: $green;
+    font: $base-font;
   }
 }
 
@@ -34,13 +37,13 @@
   color: $green;
   font-weight: 200;
   letter-spacing: .15vw;
-  padding: 0 4vw 1vw 4vw;
+  padding: 0 4vw 2vw 4vw;
   font-size: 2vw;
 }
 
 .packet-form {
   width: 100%;
-  padding: 0 3vw;
+  padding: 0 5vw;
   input, textarea {
     width: 100%;
     margin-bottom: 2vw;
@@ -48,7 +51,7 @@
   input, textarea {
     border: none;
     background-color: $light-blue;
-    border-bottom: 1px solid #404040;
+    border-bottom: .5px solid $light-grey;
     height: 3vw;
     line-height: 2vw;
     font-size: 1.25vw;
@@ -64,10 +67,17 @@
   }
 
   textarea {
+    padding: .5vw 0;
     border-top: .5px solid $light-grey;
     border-bottom: .5px solid $light-grey;
     height: 10vw;
     margin-top: 1vw;
     background: $white;
+    letter-spacing: .03vw;
+  }
+
+  .submit-button {
+    text-transform: uppercase;
+    color: $navy;
   }
 }
