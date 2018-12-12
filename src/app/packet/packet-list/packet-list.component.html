@@ -3,43 +3,57 @@
     <h1 class='packet-list-title'>
       Packets
     </h1>
-    <div class='filter-list-buttons'>
-      <button>
+    <mat-chip-list class='filter-list-buttons'>
+      <!--<mat-chip (click)='onPacketFilter()' [(ngModel)]="all" #filter='ngModel'>-->
+      <mat-chip class='selected'>
         all
-      </button>
-      <button>
+      </mat-chip>
+      <!--<mat-chip (click)='onPacketFilter()' [(ngModel)]="trunkshows" #filter='ngModel'>-->
+      <mat-chip>
         Trunkshows
-      </button>
-      <button>
+        <mat-chip>
+          TS
+        </mat-chip>
+      </mat-chip>
+      <!--<mat-chip (click)='onPacketFilter()' [(ngModel)]="boutique" #filter='ngModel'>-->
+      <mat-chip>
         Boutique
-      </button>
-    </div>
+        <mat-chip>
+          BT
+        </mat-chip>
+      </mat-chip>
+    </mat-chip-list>
   </header>
   <mat-list class='packets'>
-    <mat-list-item class='packet'>
+    <mat-list-item class='create-packet'>
       <h3>
         Create New Packet
       </h3>
-      <button class='add-packet-button'>
+      <div class='add-packet-icon'>
         <i class='fa fa-plus'></i>
-      </button>
-    </mat-list-item>
-    <!--<li class='packet' *ngFor='let packet of Packets'>-->
-    <mat-list-item>
-      <h3 class='packet-list-name'>
-        {{packet.title}}, {{packet.desc}}
-      </h3>
-      <div class='list-edit-buttons'>
-        <button>
-          BT
-        </button>
-        <button>
-          TS
-        </button>
-        <button>
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-        </button>
       </div>
     </mat-list-item>
+    <div *ngFor='let packet of packets'>
+      <div class='date-wrapper' *ngFor='let month of months'>
+        <h3 *ngIf='packet.created_at == month' class='packet-date'>
+          {{packet.created_at | date: 'MMMM'}}
+        </h3>
+      </div>
+      <mat-list-item class='packet' >
+        <h3 class='packet-list-name'>
+          {{packet.title}}, {{packet.desc}}
+        </h3>
+        <div class='list-edit-buttons'>
+          <mat-chip-list>
+            <mat-chip>
+              BT
+            </mat-chip>
+            <mat-chip>
+              TS
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+      </mat-list-item>
+    </div>
   </mat-list>
 </div>
