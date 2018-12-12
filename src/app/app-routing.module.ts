@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PacketDetailComponent } from './packet/packet-detail.component';
+import { PacketDetailComponent } from './packet/packet-detail/packet-detail.component';
 import { ItemDetailComponent } from './item/item-detail.component';
 import { PacketListComponent } from './packet/packet-list/packet-list.component';
 
