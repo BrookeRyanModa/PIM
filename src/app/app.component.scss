@@ -1,7 +1,6 @@
 @import '../imports';
 
-//REMOVE UGLY WEBKIT SCROLL BARS
-
+//app-wide default settings
 ::ng-deep ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -11,6 +10,13 @@
   background: #FF0000;
 }
 
+::ng-deep * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+//entire app
 .sidenav-container {
   position: absolute;
   top: 0;
@@ -19,14 +25,10 @@
   right: 0;
   background: $light-blue;
   padding-right: 5vw;
-
-  mat-vertical-stepper {
-    background-color: inherit;
-
-  }
 }
 
-mat-sidenav {
+//side drawer
+.mat-sidenav {
   background-color: $light-blue;
   padding: 0;
   margin: 0;
@@ -41,6 +43,7 @@ mat-sidenav {
     nav a {
       text-decoration: none;
     }
+
     .logo {
       @include logo;
       color: $navy;
@@ -48,22 +51,23 @@ mat-sidenav {
       font-size: 3.5vw;
       text-align: center;
     }
-
   }
+
 }
 
-mat-sidenav-content {
+//main content
+.mat-sidenav-content {
   padding: 3%;
 }
 
+ //mobile only
 @media (max-width: 768px) {
-  mat-sidenav {
+  .mat-sidenav {
     width: 0px;
     border: none;
-
   }
 
-  mat-sidenav-content {
+  .mat-sidenav-content {
     padding: 0;
     .mobile-header {
       nav a {
@@ -75,7 +79,7 @@ mat-sidenav-content {
   .sidenav-container {
     padding: 0px;
 
-    i { //to remove arrows
+    i { //to remove drawer arrows
       &.fas.fa-angle-left, &.fas.fa-angle-right {
         display: none;
       }
@@ -98,7 +102,6 @@ mat-sidenav-content {
         text-align: center;
         margin: 0;
       }
-
     }
 
   }

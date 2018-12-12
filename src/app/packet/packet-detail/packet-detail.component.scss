@@ -1,12 +1,6 @@
 @import '../../../imports';
 
-::ng-deep * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.card-container {
+.card-container {//item container
   overflow: auto;
   padding-right: 2vw;
 }
@@ -17,7 +11,7 @@
   display: table;
 }
 
-.item-card {
+.item-card {//each item
   background-color: $white;
   border-radius: .25vw;
   overflow: auto;
@@ -96,23 +90,13 @@
 
 }
 
-// --- PacketModel Details --- //
+// --- Packet Header --- //
 
 .packet-detail {
   max-width: 750px ;
 
   .packet-detail-header {
-    font-size: 1.25vw;
-    padding: 1vw 2vw 2vw 2vw;
-
-    .packet-title {//designer name
-      color: $navy;
-      font-weight: 100;
-      font-family: $header-font;
-      max-font-size: 34px;
-      text-transform: uppercase;
-      border-bottom: 1px solid #A0A0A0;
-      margin-bottom: .5vw;
+    @include main-header('.packet-title');
 
       a {//edit button
         text-transform: none;
@@ -149,18 +133,15 @@
     }
 
   }
-}
+
 
 @media (max-width: 768px) {
   .card-container {
-    padding-right: 0px;
     padding: 3%;
   }
 
   .item-card {
     width: $card-width-sm;
-    height: auto;
-    overflow: hidden;
     min-height: $card-height-sm;
     margin: 2.5%;
 
@@ -190,8 +171,7 @@
     }
 
     .card-img {//first (preview) image
-      height: 53vw;
-      width: auto;
+      height: $card-img-sm;
       img {
         max-height: 100%;
         width: auto;
@@ -207,7 +187,7 @@
     }
   }
 
-    // --- PacketModel Details --- //
+    // --- Packet Header --- //
 
   .packet-detail {
     margin-top: 15vw;
@@ -219,32 +199,20 @@
       padding: 1vw 2vw 2vw 2vw;
 
       .packet-title { //designer name
-        color: $navy;
-        font-weight: 100;
-        font-family: $header-font;
-        max-font-size: 34px;
-        text-transform: uppercase;
-        border-bottom: 1px solid #A0A0A0;
         margin-bottom: .5vw;
 
         a { //edit button
-          text-transform: none;
           height: 6vw;
           line-height: 6vw;
           width: 3vw;
           margin: 0 0 3vw 4vw;
-          font-family: $base-font;
           font-size: 2.5vw;
         }
 
         .icons { //download & share header icons
-          color: $green;
-          float: right;
-
           i {
             padding: 0 1vw;
           }
-
         }
       }
 
