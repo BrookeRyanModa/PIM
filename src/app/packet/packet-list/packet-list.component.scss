@@ -4,19 +4,9 @@
   max-width: 750px;
 
   .packet-list-header {
-    font-size: 1.25vw;
-    padding: 1vw 2vw 2vw 2vw;
+    @include main-header('.packet-list-title');
 
-    .packet-list-title {
-      color: $navy;
-      font-weight: 100;
-      font-family: $header-font;
-      text-transform: uppercase;
-      border-bottom: 1px solid $dark-grey;
-      margin-bottom: 1vw;
-      max-font-size: 17.5px;
-    }
-    .mat-chip-list {
+    .mat-chip-list {//packet filter buttons
       align-items: center;
       .mat-chip {
         top: 0;
@@ -28,14 +18,9 @@
           background-color: $green;
           color: white;
         }
-        .mat-chip {
-          background-color: white;
-          color: $navy;
-          border: .5px solid $light-grey;
-          border-radius: 1.5vw;
-          top: 0;
+        .mat-chip {//TS & BT icons inside chips
+          @include BTorTS-icons;
           margin: 0 0 0 .5vw;
-          padding: 0 .5vw;
           font-size: 1.1vw;
           min-height: 0;
           height: 60%;
@@ -44,7 +29,7 @@
 
     }
   }
-  .mat-list {
+  .mat-list {//packet list container
     .packet-date {
       text-transform: uppercase;
       font-family: $header-font;
@@ -53,7 +38,7 @@
       margin: 2vw 0 1vw 0;
       border-bottom: 1px solid $dark-grey;
     }
-    .mat-list-item {
+    .mat-list-item {//each packet & create button
       background-color: white;
       margin: .5vw;
       border-radius: .25vw;
@@ -61,28 +46,23 @@
       &:hover {
         box-shadow: $shadow-hover;
       }
-      &.packet {
+      &.packet {//each packet
         h3 {
           font-family: $base-font;
           font-size: 1.5vw;
           width: 87%;
           font-weight: 100;
         }
-        .mat-chip-list {
+        .mat-chip-list {//BT & TS icons on packet
           width: 100%;
           .mat-chip {
-            float: right;
-            top: 0;
+            @include BTorTS-icons;
             margin: 0 0 0 1vw;
-            padding: 0 .65vw;
-            background-color: white;
-            color: $navy;
-            border: .5px solid $light-grey;
           }
         }
       }
 
-      &.create-packet {
+      &.create-packet {//create button
         color: $green;
 
         h3 {
@@ -91,7 +71,7 @@
           width: 90%;
           font-weight: 100;
         }
-        .add-packet-icon {
+        .add-packet-icon {//plus icon
           box-sizing: border-box;
           width: 10%;
 

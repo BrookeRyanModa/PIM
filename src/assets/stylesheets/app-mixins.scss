@@ -8,4 +8,23 @@
 
 }
 
+@mixin main-header($title-element-class) {
+  font-size: 1.25vw;
+  padding: 1vw 2vw 2vw 2vw;
 
+  #{$title-element-class} {
+    color: $navy;
+    font-weight: 100;
+    font-family: $header-font;
+    text-transform: uppercase;
+    border-bottom: 1px solid $dark-grey;
+    margin-bottom: .5vw;
+  }
+}
+
+@mixin BTorTS-icons {
+  padding: 0 .65vw;
+  background-color: white;
+  color: $navy;
+  border: .5px solid $light-grey;
+}
