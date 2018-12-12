@@ -13,13 +13,14 @@ import { PacketNewComponent } from './packet/packet-new/packet-new.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatSidenavModule } from '@angular/material';
+import { MAT_LABEL_GLOBAL_OPTIONS, MatSidenavModule} from '@angular/material';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
@@ -41,13 +42,16 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatCardModule,
     MatChipsModule,
     MatDialogModule,
+    MatFormFieldModule,
     MatButtonModule,
     MatListModule,
     MatIconModule,
     MatStepperModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
