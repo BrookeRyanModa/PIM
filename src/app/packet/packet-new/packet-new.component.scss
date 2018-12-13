@@ -56,13 +56,13 @@
     line-height: 2vw;
     font-size: 1.25vw;
     font-family: $base-font;
-    color: $dark-grey;
 
     &:hover, &:focus, :active {
       border-color: inherit;
       -webkit-box-shadow: none;
       box-shadow: none;
       outline: none;
+      color: $navy !important;
     }
   }
 
@@ -79,5 +79,66 @@
   .submit-button {
     text-transform: uppercase;
     color: $navy;
+    &:hover {
+      font-weight: bold;
+    }
   }
+}
+
+@media (max-width: 768px) {
+  ::ng-deep .mat-sidenav-content {
+    background-color: $light-blue;
+    z-index: 0;
+    position: relative;
+    overflow: scroll;
+  }
+
+  .packet-new-modal {
+    height: auto;
+    width: 100vw;
+    margin: 20vw 0 0 0;
+    border: none;
+    background-color: $light-blue;
+    box-shadow: none;
+    a {
+      display: none;
+    }
+  }
+
+  .packet-form-header {
+    letter-spacing: .15vw;
+    padding: 2vw 4vw;
+    font-size: 5vw;
+  }
+
+  .packet-form {
+    width: 100%;
+    padding: 5vw 7.5vw;
+    input, textarea {
+      width: 100%;
+      margin-bottom: 5vw;
+    }
+    input, textarea {
+      background-color: $light-blue;
+      border-bottom: 1px solid $light-grey;
+      height: 6vw;
+      line-height: 6vw;
+      font-size: 3.5vw;
+    }
+
+    textarea {
+      border-top: 1px solid $light-grey;
+      border-bottom: 1px solid $light-grey;
+      height: 30vw;
+      margin-top: 2vw;
+      background: $white;
+    }
+
+    .submit-button {
+      text-transform: uppercase;
+      color: $navy;
+      font-size: 4.5vw;
+    }
+  }
+
 }
