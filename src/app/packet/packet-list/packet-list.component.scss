@@ -65,21 +65,29 @@
       &.create-packet {//create button
         color: $green;
 
-        h3 {
-          font-family: $base-font;
-          font-size: 1.5vw;
+        nav {
           width: 90%;
-          font-weight: 100;
-        }
-        .add-packet-icon {//plus icon
-          box-sizing: border-box;
-          width: 10%;
+          a {
+            text-decoration: none !important;
 
-          i, i::before {
-            width: 100%;
-            padding-left: 40%;
+            h3 {
+              font-size: 1.5vw;
+              font-weight: 100;
+              font-family: $base-font;
+              color: $green;
+            }
+            .add-packet-icon {//plus icon
+              box-sizing: border-box;
+              width: 10%;
+
+              i, i::before {
+                width: 100%;
+                padding-left: 40%;
+              }
+            }
           }
         }
+
 
       }
 
@@ -143,14 +151,21 @@
 
         }
         &.create-packet {
-          h3 {
-            font-size: 4vw;
-            width: 60%;
+          nav {
+            a {
+              h3 {
+                font-size: 4vw;
+                width: 60%;
+              }
+              i {
+                width: 30%;
+                margin-left: 23vw;
+              }
+            }
+
           }
-          i {
-            width: 30%;
-            margin-left: 23vw;
-          }
+
+
         }
         .mat-chip-list {
           .mat-chip {

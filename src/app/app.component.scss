@@ -86,12 +86,12 @@
     }
 
     .mobile-header {
-      padding-top: 1vw;
-      height: 12vw;
+      padding: 1vw 0;
+      height: 14vw;
       background-color: $white;
       margin-bottom: 2vw;
       width: 100%;
-      z-index: 1000;
+      z-index: 1;
       position: fixed;
 
       .mobile-logo {
